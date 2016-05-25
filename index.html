@@ -1,0 +1,207 @@
+<!doctype html>
+<style type="text/css">
+.ui-header {
+	min-width: 100%!important;
+	height: 40px;
+	vertical-align: middle!important;
+}
+.pattern {
+	border-radius:15px;
+	border:1px solid black;
+	width:60px;
+	height:60px;
+}
+.patternClicked {
+	border-radius:15px;
+	border:3px solid black;
+	width:60px;
+	height:60px;
+}
+.swatch {
+	border-radius:15px;
+	border:1px solid black;
+	width:45px;
+	height:45px;
+}
+.swatchClicked {
+	border-radius:15px;
+	border:3px solid black;
+	width:45px;
+	height:45px;
+}
+</style>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<title>Untitled Document</title>
+</head>
+
+<body>
+<div data-role="page">
+  <div data-role="panel" id="panel" data-position="left" data-transition="slide" data-display="overlay">
+    <div data-role="main" class="ui-content">
+    <select name="phonetype" id="phonetype">
+        <option disabled selected>Phone Type</option>
+        <optgroup label="Apple">
+            <option value="iPhone 6">iPhone 6</option>
+            <option value="iPhone 6S">iPhone 6S</option>
+            <option value="iPhone 6 Plus">iPhone 6 Plus</option>
+            <option value="iPhone 6S Plus">iPhone 6S Plus</option>
+        </optgroup>
+        <optgroup label="Samsung">
+            <option value="Galaxy S7">Galaxy S7</option>
+            <option value="Galaxy S7 Edge">Galaxy S7 Edge</option>
+            <option value="Galaxy Note 5">Galaxy Note 5</option>
+        </optgroup>
+    </select>
+    </div>
+  </div>
+  <div data-role="panel" id="panel2" data-position="right" data-transition="slide" data-display="overlay">
+    <div data-role="main" class="ui-content">
+	Case Type and Color<br><br>
+	<select name="casetype" id="casetype">
+		<option disabled selected>Case Type</option>
+		<optgroup>
+			<option value="Rubber Bumper">Rubber Bumper</option>
+			<option value="Plastic">Plastic</option>
+			<option value="Tough Case">Tough Case</option>
+		</optgroup>
+	</select>
+	<br><br>
+	<select name="color">
+		<option disabled selected>Case Color</option>
+		<optgroup>
+			<option value="Black">Black</option>
+			<option value="White">White</option>
+		</optgroup>
+	</select>
+	</div>
+  </div>
+  <div data-role="panel" id="panel3" data-position="right" data-transition="slide" data-display="overlay" style="margin-left:5px!important;">
+    <div data-role="main" class="ui-content">
+    Choose Your Pattern<br><br>
+   	<img href="#" data-role="button" src="images/patterns/Anchor.png" class="pattern" alt=""/>
+    <img src="images/patterns/Baroque.png" class="pattern" alt=""/>
+    <img src="images/patterns/Chevron Narrow.png" class="pattern" alt=""/>
+    <br>
+    <img src="images/patterns/Chevron WIde.png" class="pattern" alt=""/>
+    <img src="images/patterns/Damask.png" class="pattern" alt=""/>
+    <img src="images/patterns/Deco.png" class="pattern" alt=""/>
+    <br>
+    <img src="images/patterns/Elephants.png" class="pattern" alt=""/>
+    <img src="images/patterns/Giraffe.png" class="pattern" alt=""/>
+    <img src="images/patterns/Greek Key.png" class="pattern" alt=""/>
+    <br>
+    <img src="images/patterns/Houndstooth.png" class="pattern" alt=""/>
+    <img src="images/patterns/Leaf Swirl.png" class="pattern" alt=""/>
+    <img src="images/patterns/Lemons.png" class="pattern" alt=""/>
+    <br>
+    <img src="images/patterns/Polka Dots.png" class="pattern" alt=""/>
+    <img src="images/patterns/Quatrefoil.png" class="pattern" alt=""/>
+    <img src="images/patterns/Reverse Damask.png" class="pattern" alt=""/>
+    <br>
+    <img src="images/patterns/Stripes.png" class="pattern" alt=""/>
+    <img src="images/patterns/Zebra.png" class="pattern" alt=""/>
+    </div>
+  </div>
+  <div data-role="panel" id="panel4" data-position="right" data-transition="slide" data-display="overlay">
+    <div data-role="main" class="ui-content">
+    Choose Pattern Color<br><br>
+  	<img src="images/swatches/Light Pink.png" class="swatch" alt=""/>
+    <img src="images/swatches/Rose Pink.png" class="swatch" alt=""/>
+    <img src="images/swatches/lilly pink.png" class="swatch" alt=""/>
+	<img src="images/swatches/Hot Pink.png" class="swatch" alt=""/>
+	<br>
+	<img src="images/swatches/Berry Pink.png" class="swatch" alt=""/>
+	<img src="images/swatches/Melon.png" class="swatch" alt=""/>
+	<img src="images/swatches/Coral.png" class="swatch" alt=""/>
+	<img src="images/swatches/Orange.png" class="swatch" alt=""/>
+	<br>
+	<img src="images/swatches/Orchid.png" class="swatch" alt=""/>
+	<img src="images/swatches/Lavender.png" class="swatch" alt=""/>
+	<img src="images/swatches/Purple.png" class="swatch" alt=""/>
+	<img src="images/swatches/Plum.png" class="swatch" alt=""/>
+	<br>
+	<img src="images/swatches/Light Blue.png" class="swatch" alt=""/>
+	<img src="images/swatches/Turquoise.png" class="swatch" alt=""/>
+	<img src="images/swatches/Robin Blue.png" class="swatch" alt=""/>
+	<img src="images/swatches/Teal.png" class="swatch" alt=""/>
+	<br>
+	<img src="images/swatches/Royal Blue.png" class="swatch" alt=""/>
+	<img src="images/swatches/Navy Blue.png" class="swatch" alt=""/>
+	<img src="images/swatches/Celery Green.png" class="swatch" alt=""/>
+	<img src="images/swatches/Mint.png" class="swatch" alt=""/>
+	<br>
+	<img src="images/swatches/Moss.png" class="swatch" alt=""/>
+	<img src="images/swatches/Lime Green.png" class="swatch" alt=""/>
+	<img src="images/swatches/Kelly Green.png" class="swatch" alt=""/>
+	<img src="images/swatches/Hunter Green.png" class="swatch" alt=""/>
+	<br>
+	<img src="images/swatches/Red.png" class="swatch" alt=""/>
+	<img src="images/swatches/Dark Red.png" class="swatch" alt=""/>
+	<img src="images/swatches/Maroon.png" class="swatch" alt=""/>
+	<img src="images/swatches/Banana.png" class="swatch" alt=""/>
+	<br>
+	<img src="images/swatches/Yellow.png" class="swatch" alt=""/>
+	<img src="images/swatches/Gold.png" class="swatch" alt=""/>
+	<img src="images/swatches/Camel.png" class="swatch" alt=""/>
+	<img src="images/swatches/Brown.png" class="swatch" alt=""/>
+	<br>
+	<img src="images/swatches/Ivory.png" class="swatch" alt=""/>
+	<img src="images/swatches/Light Grey.png" class="swatch" alt=""/>
+	<img src="images/swatches/Slate Grey.png" class="swatch" alt=""/>
+	<img src="images/swatches/Black.png" class="swatch" alt=""/>
+    </div>
+  </div>
+  <div data-role="panel" id="panel5" data-position="right" data-transition="slide" data-display="overlay">
+    <div data-role="main" class="ui-content">Tag Style</div>
+  </div>
+  <div data-role="panel" id="panel6" data-position="right" data-transition="slide" data-display="overlay">
+    <div data-role="main" class="ui-content">Tag Color</div>
+  </div>
+  <div data-role="panel" id="panel7" data-position="right" data-transition="slide" data-display="overlay">
+    <div data-role="main" class="ui-content">Lettering Style</div>
+  </div>
+  <div data-role="panel" id="panel8" data-position="right" data-transition="slide" data-display="overlay">
+    <div data-role="main" class="ui-content">Fonts</div>
+  </div>
+  <div data-role="header" class="ui-header ui-header-fixed"><a href="#panel" date-role="button" class="ui-btn-icon-left ui-icon-bars ui-btn ui-shadow ui-corner-all">Options</a>
+    <h4><img src="images/Logo 2.png" style="width:50%; height:50%;" alt=""/></h4>
+  </div>
+  <div data-role="main" class="ui-content"> 
+  <a id="tab1" data-role="button" href="#panel2" style="position:absolute;right:-3px;top:40px;width:100px;height:70px;" class="ui-btn ui-icon-arrow-l ui-shadow ui-corner-all"><img src="images/Device Icon - Apple 3.png" width="64" height="64" alt=""/></a> 
+   <a id="tab2" data-role="button" href="#panel3" style="position:absolute;right:-3px;top:140px;width:100px;height:70px;" class="ui-btn ui-icon-arrow-l ui-shadow ui-corner-all"><img style="border:1px solid black; border-radius:15px;" src="images/patterns/Greek Key.png" width="64" height="64" alt=""/></a> 
+      <a id="tab3" data-role="button" href="#panel4" style="position:absolute;right:-3px;top:240px;width:100px;height:70px;" class="ui-btn ui-icon-arrow-l ui-shadow ui-corner-all"><img style="border:1px solid black; border-radius:15px;" src="images/color wheel icon.png" width="64" height="64" alt=""/></a>
+  </div>
+  <div data-role="footer" class="ui-footer ui-footer-fixed"><h6>Customizer created by iNovate Marketing, Inc. ©2016. All Rights Reserved.</h6></div>
+</div>
+<script type="text/javascript">
+  document.getElementById('phonetype').addEventListener("change", function() {
+	  var phoneType = document.getElementById('phonetype').value;
+	  if (phoneType == "iPhone 6" || phoneType == "iPhone 6S" || phoneType == "iPhone 6 Plus" || phoneType == "iPhone 6S Plus") {
+		  document.getElementById('tab1').innerHTML = '<img src="images/Device Icon - Apple 3.png" width="64" height="64" alt=""/>';
+  	}
+	else {
+		document.getElementById('tab1').innerHTML = '<img src="images/Device Icon - Samsung 3.png" width="64" height="64" alt=""/>';
+	}
+  });
+  $('.swatch').on('click', function(e){
+      e.preventDefault();
+	  $('.swatchClicked').addClass('swatch');
+	  $('.swatchClicked').removeClass('swatchClicked');
+      $(this).toggleClass('swatchClicked');
+    });
+	$('.pattern').on('click', function(e){
+      e.preventDefault();
+	  $('.patternClicked').addClass('pattern');
+	  $('.patternClicked').removeClass('patternClicked');
+      $(this).toggleClass('patternClicked');
+    });
+  </script>
+</body>
+</html>
